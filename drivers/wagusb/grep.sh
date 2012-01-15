@@ -1,0 +1,2 @@
+grep wagusb /proc/modules
+

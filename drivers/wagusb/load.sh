@@ -1,0 +1,2 @@
+sudo insmod wagusb.ko
+

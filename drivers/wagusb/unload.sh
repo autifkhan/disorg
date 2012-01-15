@@ -1,0 +1,2 @@
+sudo rmmod wagusb.ko
+
