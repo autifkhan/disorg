@@ -5,6 +5,7 @@
 #include <asm/uaccess.h>
 #include <linux/usb.h>
 #include <linux/mutex.h>
+#include <linux/slab.h>
 
 #define WAGUSB_MIN(x, y) (((x) < (y)) ? (x) : (y))
 
@@ -42,7 +43,7 @@ struct usb_wagusb
 
 ssize_t wagusb_read (struct file *filp, char __user *buf, size_t count, loff_t *f_pos)
 {
-  int result = 0, cache_count, bs;
+  int result = 0, cache_count;/*, bs;*/
   struct usb_wagusb *dev = (struct usb_wagusb*) filp->private_data;
 
   if (count > EPBUFF_SIZE) return -EFAULT;
