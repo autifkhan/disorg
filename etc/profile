@@ -1,0 +1,12 @@
+alias s='apt-cache search'
+alias i='sudo apt-get install -y'
+alias t='sudo apt-get install -s'
+alias caly='cal -y'
+alias cal3='cal -3'
+alias c='clear'
+alias wdf='watch "df; df -h"'
+alias um='sudo umount /home/autif/mnt/data /home/autif/mnt/data2 /home/autif/mnt/server'
+alias pst='ps -ef | grep thttpd'
+alias kthttpd='kill -USR1 `ps -ef | grep thttpd | grep -v grep | sed s/\\\s\\\+/=/g | cut -d= -f2`'
+alias alertme='notify-send -t 3600000 -u low "Something is done"'
+

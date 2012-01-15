@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; chatset=UTF-8" />
+    <title>Autif Khan's bookmarks</title>
+    <style type="text/css">
+      body {font-family: "Comic sans MS",arial,serif; line-height:125%; font-size: medium; color: #707070;}
+      b {font-weight: bold;}
+      .tiny {font-size: 70%;}
+      .smaller {font-size: 85%; line-height: 70%;}
+      a:link {color: #505050;}
+      a:hover {background: #909090; color:#f0f0f0;}
+      table,tr,td {border: 0px; margin: 0px; padding: 0px; border-collapse: collapse;}
+      td table tr > td {padding: 1px 3px 1px 0px;}
+      .cell {border: 1px dotted; padding: 5px;}
+      textarea {border: 1px solid; padding: 2px; color: #505050; font-family: "Comic sans MS",arial,serif; font-size: small;}
+    </style>
+
+<script language="javascript">
+function rot13()
+{
+  document.rot13.output.value=document.rot13.input.value;
+}
+
+var last="";
+var rot13map;
+
+function rot13init()
+{
+  var map = new Array();
+  var s   = "abcdefghijklmnopqrstuvwxyz";
+  var n   = "01234567899876543210";
+
+  for (i=0; i<s.length; i++)
+    map[s.charAt(i)]			= s.charAt((i+13)%26);
+  for (i=0; i<s.length; i++)
+    map[s.charAt(i).toUpperCase()]	= s.charAt((i+13)%26).toUpperCase();
+  for (i=0; i<n.length; i++)
+    map[n.charAt(i)]			= n.charAt((i+10)%10);
+  return map;
+}
+
+function rot13(a)
+{
+  if (!rot13map)
+    rot13map=rot13init();
+  s = "";
+  for (i=0; i<a.length; i++)
+    {
+      var b = a.charAt(i);
+
+      s	+= (b>='A' && b<='Z' || b>='a' && b<='z' || b>='0' && b<='9' ? rot13map[b] : b);
+    }
+  return s;
+}
+
+function upd()
+{
+  if (document.forms[0].text.value==last)
+    return;
+
+  last = document.forms[0].text.value;
+  document.forms[0].rot13.value = rot13(last);
+}
+
+</script>
+
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td class="cell"><b>Syr</b>
+	  	  <span class="tiny">
+            <a href="http://web.syr.edu/~gtsiddiq/">www</a>
+            <a href="http://registrar.syr.edu/acadcalendars/">Cal</a>
+            <a href="http://english.syr.edu">English</a>
+          </span>
+          <table>
+            <tr>
+              <td><a href="http://www.syr.edu">SyrU</a></td>
+              <td><a href="https://sumail.syr.edu/">SUMail</a></td>
+              <td><a href="http://myslice.syr.edu/">Slice</a></td>
+              <td><a href="http://library.syr.edu">Library</a></td>
+              <td><a href="https://blackboard.syr.edu/">BlackB</a></td>
+            </tr>
+          </table>
+        </td>
+        <td class="cell"><b>Work</b>
+          <table>
+            <tr>
+              <td><a href="http://wahoo">Wahoo</a></td>
+              <td><a href="http://vitalsignscentral">VitalSC</a></td>
+              <td><a href="http://welchallyn.benergy.com">Benergy</a></td>
+	      <td><a href="http://skfjrweb01:32000/Pages/Default.aspx">SP</a></td>
+              <td><a href="http://syracuse.craigslist.org">CL</a></td>
+              <td><a href="http://www.weather.com/weather/local/13210">Wthr</a></td>
+              <td><a href="http://www.fandango.com/TheaterPage.aspx?radius=15&amp;tid=AAJGH">Carousel</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="cell"><b>Mail/News</b>
+          <table>
+            <tr>
+              <td><a href="http://www.hotmail.com">Hotmail</a></td>
+              <td>
+                <a href="https://gmail.google.com/gmail">GMail</a>
+                <a href="https://gmail.google.com/gmail?ui=html">*</a>
+              </td>
+              <td><a href="http://mail.yahoo.com">Y!Mail</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="http://www.orkut.com">Orkut</a></td>
+              <td><a href="http://www.facebook.com">FaceBk</a></td>
+              <td><a href="http://www.meebo.com">Meebo</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.cnn.com">CNN</a></td>
+              <td><a href="http://www.msnbc.com">NBC</a></td>
+              <td><a href="http://news.google.com">GNews</a></td>
+            </tr>
+	        <tr>
+	          <td><a href="http://xkcd.com">XKCD</a></td>
+              <td><a href="http://www.npr.org">NPR</a></td>
+              <td><a href="http://www.ndtv.com">NDTV</a></td>
+	        </tr>
+            <tr>
+              <td><a href="http://www.timesofindia.com">TOI</a></td>
+              <td><a href="http://www.boxofficeindia.com">BOI</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.variety.com">Variety</a></td>
+              <td><a href="http://www.filmfare.com">Filmfare</a></td>
+              <td><a href="http://www.bollywood.com">Bollywood</a></td>
+            </tr>
+          </table>
+        </td>
+        <td class="cell"><b>Online Stores</b>
+          <table>
+            <tr>
+
+              <td><a href="http://www.pricewatch.com/">pricewatch</a></td>
+              <td><a href="http://www.amazon.com">Amazon</a></td>
+              <td><a href="http://www.newegg.com">Newegg</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.bookpool.com">Bookpool</a></td>
+              <td><a href="http://www.bn.com">BarnesNoble</a></td>
+              <td><a href="http://www.half.com">Half.com</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.circuitcity.com">CircuitCity</a></td>
+              <td><a href="http://www.bestbuy.com">BestBuy</a></td>
+              <td><a href="http://www.woot.com">Woot</a></td>
+              <td><a href="http://www.meritline.com">MeritLine</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.edealinfo.com/">EDealInfo</a></td>
+              <td><a href="http://www.pricegrabber.com/">PriceGrabber</a></td>
+              <td><a href="http://www.buy.com/">Buy</a></td>
+            </tr>
+            <tr>
+	      <td><a href="http://www.olimex.com/">Olimex</a></td>
+	      <td><a href="http://www.digikey.com/">DigiKey</a></td>
+	      <td><a href="http://www.microcontrollershop.com/">MCShop</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.nehaflix.com/">NehaFlix</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="cell"><b>Financial</b>
+          <table>
+            <tr>
+              <td><a href="http://www.bankofamerica.com/">BOA</a></td>
+              <td><a href="http://capitalone.com/">CapitalOne</a></td>
+              <td><a href="http://www.ingdirect.com">ING</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.onlinesbi.com/gls">SBI</a></td>
+              <td><a href="http://www.icicibank.com/">ICICI</a></td>
+              <td><a href="https://rcam.target.com/">Target</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.netflix.com">Netflix</a></td>
+              <td><a href="http://www.relianceindiacall.com/">Reliance</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.fidelity.com">Fidelity</a></td>
+              <td><a href="http://www.401k.com">401k</a></td>
+              <td><a href="http://www.att.com">ATT</a></td>
+            </tr>
+          </table>
+        </td>
+        <td class="cell"><b>Reference</b>
+          <table>
+            <tr>
+              <td><a href="http://www.imdb.com/">IMDB</a></td>
+              <td><a href="http://online.tvguide.com/listings/">TV Guide</a></td>
+              <td><a href="http://tv.yahoo.com/listings">TV.Yahoo</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://babelfish.altavista.com/">Babelfish</a></td>
+              <td><a href="http://dictionary.reference.com">Dictionary</a></td>
+              <td><a href="http://www.wikipedia.org/">Wiki</a></td>
+              <td><a href="http://www.timeanddate.com">Time&amp;Date</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.weather.com/outlook/travel/local/INXX0096?whatprefs=">New Delhi</a></td>
+              <td><a href="http://weather.cnn.com/weather/forecast.jsp?locCode=NDEX">New Delhi</a></td>
+	      <td><a href="http://www.samachar.com">Samachar</a></td>
+            </tr>
+	    <tr>
+              <td><a href="http://radio.seti.org/">SETI Radio</a></td>
+              <td><a href="http://www.npr.org/programs/waitwait/">WaitWait</a></td>
+              <td><a href="http://www.theskepticsguide.org/">SGU</a></td>
+              <td><a href="http://www.skepticality.com/p_listentopast.php">Skepticality</a></td>
+	    </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="cell"><b>This and That</b>
+          <table>
+            <tr>
+              <td><a href="http://www.google.com">Google</a></td>
+              <td><a href="http://maps.google.com/">Maps</a></td>
+              <td><a href="https://talk.google.com/">Talk</a></td>
+              <td><a href="https://docs.google.com/">Docs</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.yahoo.com">Yahoo</a></td>
+              <td><a href="http://maps.yahoo.com">Maps</a></td>
+              <td><a href="http://yp.yahoo.com">YP</a></td>
+              <td><a href="http://im.yahoo.com">IM</a></td>
+              <td><a href="http://games.yahoo.com">Gm</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://search.live.com">Live</a></td>
+              <td><a href="http://local.live.com">Maps</a></td>
+              <td><a href="http://games.msn.com">Games</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.amul.com/hits.html">Amul</a></td>
+              <td><a href="http://www.fandango.com/">Fandango</a></td>
+              <td><a href="http://www.flightview.com">Flightview</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.nfl.com/">NFL</a></td>
+              <td><a href="http://www.mlb.com">MLB</a></td>
+              <td><a href="http://www.nba.com">NBA</a></td>
+            </tr>
+          </table>
+        </td>
+        <td class="cell"><b>Geek</b>
+          <table>
+            <tr>
+              <td><a href="http://slashdot.org/">SlashDot</a></td>
+              <td><a href="http://freshmeat.net/">Freshmeat</a></td>
+              <td><a href="http://digg.com/">Digg</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.ubuntu.com">Ubuntu</a></td>
+              <td><a href="http://packages.ubuntu.com">Packages</a></td>
+              <td><a href="http://www.nslu2-linux.org/">NSLU2</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.dyndns.org/">DynDNS</a></td>
+              <td><a href="http://tekxtc@members.dyndns.org/nic/update?system=dyndns&amp;hostname=cheem.homelinux.org">Update</a></td>
+              <td><a href="http://checkip.dyndns.org">CheckIP</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://groups.yahoo.com/group/apnelog/messages/">Apnelog</a></td>
+              <td><a href="http://www.switchboard.com">Switchboard</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://godaddy.com/">GoDaddy</a></td>
+              <td><a href="http://esqsoft.com/javascript_examples/date-to-epoch.htm">Epoch</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <form name="rot13">
+        <td class="cell"><b>ROT13</b><br/>
+          <textarea id="text" onchange="upd()" onkeydown="upd()" onkeypress="upd()" onkeyup="upd()"></textarea>
+        </td>
+        <td class="cell"><b>EBG86</b><br/>
+          <textarea id="rot13" readonly="yes" class="readonly"></textarea>
+        </td>
+        </form>
+      </tr>
+    </table>
+    <table width="615" class="tiny">
+    <tr>
+		<td>
+		  <a href="http://127.0.0.1">0</a>
+		  <a href="http://192.168.1.1">R</a>
+		  <a href="http://angelfire.com/">AF</a>
+		  <a href="http://angelfire.com/linux/autif">AFwww</a>
+		  <a href="http://www.billoreilly.com/currentarticle">BOR</a>
+		  <a href="http://desitorrents.com/forums">DT</a>
+		  <a href="http://thepiratebay.org/">TPB</a>
+		</td>
+		<td align="right">
+		  <a href="http://www.bridgew.edu">BSC</a>
+		  <a href="ftp://webhost.bridgew.edu">W:</a>
+		  <a href="http://webhost.bridgew.edu/gsiddiqui/">GS</a>
+		  <a href="http://webhost.bridgew.edu/ltorda/">LT</a>
+		  <br/>
+		</td>
+    <tr>
+		<td>
+		  <a href="http://www.r1150r.net">R1150R</a>
+		  <a href="http://www.r1150r.org/board/">Frm</a>
+		  <a href="http://sv650.org/">UK SV</a>
+		  <a href="http://svrider.com/">US SV</a>
+		  <a href="http://katriders.com/forums/">KatRider</a>
+		  <a href="http://fzrarchives.com">FZR</a>
+		  <a href="http://fzrarchives.com/ipb/">Frm</a>
+		  <a href="http://www.stromtrooper.com/forums/">DL</a>
+		  <a href="http://vstrom.info/">Frm</a>
+		  <a href="http://www.yamahafz1oa.com/">FZ1</a>
+		  <a href="http://www.yamahafz1oa.com/forum/index.php">Frm</a>
+		</td>
+    <tr>
+		<td>
+		  <a href="http://powersports.honda.com/motorcycles/">Honda</a>
+		  <a href="http://www.suzukicycles.com">Suzuki</a>
+		  <a href="http://www.yamaha-motor.com/">Yamaha</a>
+		  <a href="http://www.kawasaki.com/">Kawasaki</a>
+		  <a href="http://www.bmwmotorcycles.com/machineTmpl.jsp">BMW</a>
+		  <a href="http://www.motorbikes.be/en/">MB.be</a>
+		  <a href="http://www.kbb.com/kbb/Motorcycles/Retail.aspx">KBBR</a>
+		  <a href="http://www.kbb.com/kbb/Motorcycles/Trade-In.aspx">KBBT</a>
+		  <a href="http://syracuse.craigslist.org/mcy">CL</a>
+		</td>
+    </table>
+  </body>
+</html>
